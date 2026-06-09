@@ -1,0 +1,108 @@
+/* --- Базовые стили --- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+/* --- Шапка сайта (Header) --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h2 {
+    margin: 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Кнопка корзины (с SVG) */
+.btn-cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* --- Подвал сайта (Footer) и соцсети --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222;
+    margin-top: 40px;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Цвет SVG иконок соцсетей */
+.social-links svg {
+    fill: white; 
+    transition: fill 0.3s;
+}
+
+.social-links svg:hover {
+    fill: #007bff; /* Меняют цвет при наведении */
+}
+
+/* --- МОБИЛЬНАЯ АДАПТАЦИЯ (Медиа-запросы) --- */
+
+/* На компьютере прячем кнопку бургера */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; 
+    }
+    
+    .main-nav ul {
+        display: none; 
+    }
+
+    h2 {
+        font-size: 1.5rem; 
+    }
+
+    header {
+        padding: 10px 15px; 
+    }
+
+    .page-layout {
+        padding: 1rem;
+    }
+}
